@@ -24,7 +24,9 @@ public class Main {
             2026
         );
 
-        boolean percentagePass = candidate.getPercentage() >= job.getMinimumPercentage();
+        EligibilityRule percentageRule = new PercentageRule();
+
+        boolean percentagePass = percentageRule.check(candidate, job);
         boolean backlogPass = candidate.getBacklogs() <= job.getMaximumBacklogs();
         boolean yearPass = candidate.getGraduationYear() == job.getRequiredGraduationYear();
 
