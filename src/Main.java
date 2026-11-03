@@ -8,21 +8,33 @@ public class Main {
         double percentage = scanner.nextDouble();
         int backlogs = scanner.nextInt();
         int graduationYear = scanner.nextInt();
+        int skillCount = scanner.nextInt();
+
+        String[] skills = new String[skillCount];
+
+        for (int i = 0; i < skillCount; i++) {
+            skills[i] = scanner.next();
+        }
 
         Candidate candidate = new Candidate(
-            name,
-            percentage,
-            backlogs,
-            graduationYear
-        );
+                name,
+                percentage,
+                backlogs,
+                graduationYear,
+                skills);
+        String[] requiredSkills = {
+                "java",
+                "python",
+                "SQL"
+        };
 
         Job job = new Job(
-            "Infosys",
-            "Java Developer",
-            65.0,
-            0,
-            2026
-        );
+                "Infosys",
+                "Java Developer",
+                65.0,
+                0,
+                2026,
+                requiredSkills);
 
         EligibilityChecker checker = new EligibilityChecker();
 

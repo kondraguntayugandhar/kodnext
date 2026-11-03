@@ -3,9 +3,10 @@ public class EligibilityChecker {
 
     public EligibilityChecker() {
         rules = new EligibilityRule[] {
-            new PercentageRule(),
-            new BacklogRule(),
-            new GraduationYearRule()
+                new PercentageRule(),
+                new BacklogRule(),
+                new GraduationYearRule(),
+                new SkillRule()
         };
     }
 
