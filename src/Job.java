@@ -39,3 +39,4 @@ public class Job {
         return requiredGraduationYear;
     }
 }
+
